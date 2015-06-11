@@ -5,11 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 [![Platform](https://img.shields.io/cocoapods/p/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 
+A [log.io](http://logio.org/) logger for [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install`.
 
-## Requirements
+Configure the logger and parameters:
+
+``` objective-c
+LIOLogger *logio = [LIOLogger sharedInstance];
+logio.nodeName = [[UIDevice currentDevice] name];
+logio.host = @"localhost";
+logio.port = 28777;
+[DDLog addLogger:logio];
+```
 
 ## Installation
 
@@ -19,10 +29,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "lio-cocoalumberjack"
 ```
-
-## Author
-
-Erick Jung, erickjung@gmail.com
 
 ## License
 
