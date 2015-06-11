@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 [![Platform](https://img.shields.io/cocoapods/p/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 
-A [log.io](http://logio.org/) logger for [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
+A [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) logger for [log.io](http://logio.org/) service.
 
 ## Usage
 
