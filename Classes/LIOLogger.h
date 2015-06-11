@@ -21,7 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDLog.h"
+#import "CocoaLumberjack.h"
+#import "DDLogMacros.h"
 #import "GCDAsyncSocket.h"
 
 @interface LIOLogger : DDAbstractLogger <DDLogger, GCDAsyncSocketDelegate>

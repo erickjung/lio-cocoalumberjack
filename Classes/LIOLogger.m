@@ -55,11 +55,11 @@
 
     if (!self.wasInitialized) {
         self.calendarUnitFlags = (NSCalendarUnitYear   |
-                                  NSCalendarUnitMonth  |
-                                  NSCalendarUnitDay    |
-                                  NSCalendarUnitHour   |
-                                  NSCalendarUnitMinute |
-                                  NSCalendarUnitSecond);
+                NSCalendarUnitMonth  |
+                NSCalendarUnitDay    |
+                NSCalendarUnitHour   |
+                NSCalendarUnitMinute |
+                NSCalendarUnitSecond);
 
         self.streamList = @{
                 @(DDLogFlagError)   : @"error",
@@ -69,7 +69,7 @@
                 @(DDLogFlagVerbose) : @"verbose",
         };
 
-        NSLog(@"[log.io] connecting to %@:%d", self.host, self.port);
+        NSLog(@"[log.io] connecting to %@:%ld", self.host, (long) self.port);
 
         self.tcpSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
         NSError *error = nil;
@@ -118,9 +118,9 @@
 
     if (logMessage && self.streamList[@(logMessage->_flag)] != nil) {
         NSString *message = _logFormatter ? [_logFormatter formatLogMessage:logMessage] : logMessage->_message;
-        [self sendRequest:[NSString stringWithFormat:@"+log|%@|%@|%d|%@ %@\r\n", self.streamList[@(logMessage->_flag)],
+        [self sendRequest:[NSString stringWithFormat:@"+log|%@|%@|%ld|%@ %@\r\n", self.streamList[@(logMessage->_flag)],
                                                      self.nodeName,
-                                                     logMessage->_flag,
+                                                     (long) logMessage->_flag,
                                                      [self getMessageDateTimeString:logMessage],
                                                      message]];
     }
