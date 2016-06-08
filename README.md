@@ -1,6 +1,5 @@
 # lio-cocoalumberjack
 
-[![CI Status](http://img.shields.io/travis/Erick Jung/lio-cocoalumberjack.svg?style=flat)](https://travis-ci.org/Erick Jung/lio-cocoalumberjack)
 [![Version](https://img.shields.io/cocoapods/v/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 [![License](https://img.shields.io/cocoapods/l/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
 [![Platform](https://img.shields.io/cocoapods/p/lio-cocoalumberjack.svg?style=flat)](http://cocoapods.org/pods/lio-cocoalumberjack)
