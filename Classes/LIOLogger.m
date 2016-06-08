@@ -138,6 +138,7 @@
 
 - (void) socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     NSLog(@"[log.io] socket disconnected from host: (%@)", err);
+    self.wasInitialized = NO;
 }
 
 @end
